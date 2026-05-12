@@ -15,17 +15,17 @@ const processSteps = [
   },
   { 
     id: 2, 
-    title: "Strategic Sourcing", 
+    title: "Global Sourcing", 
     description: "Identifying and vetting global suppliers to match strict quality and volume standards.", 
     icon: Globe,
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.pexels.com/photos/335394/pexels-photo-335394.jpeg"
   },
   { 
     id: 3, 
-    title: "Procurement & Negotiation", 
+    title: "Procurement and Supplying", 
     description: "Securing contracts and establishing long-term enterprise pricing structures.", 
     icon: FileText,
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg"
   },
   { 
     id: 4, 
