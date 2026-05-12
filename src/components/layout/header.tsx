@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -16,6 +17,7 @@ const navLinks = [
 ];
 
 export function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isHidden, setIsHidden] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -73,25 +75,36 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="group relative flex flex-col items-center"
-            >
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-[9px] font-mono text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity">
-                  {link.id}
-                </span>
-                <span className="text-xs font-mono tracking-[0.2em] uppercase text-white/50 group-hover:text-white transition-colors duration-300">
-                  {link.name}
-                </span>
-              </div>
-              <motion.div 
-                className="absolute -bottom-1 w-0 h-[1px] bg-brand-gold group-hover:w-full transition-all duration-500"
-              />
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="group relative flex flex-col items-center"
+              >
+                <div className="flex items-baseline gap-1.5">
+                  <span className={cn(
+                    "text-[11px] font-mono text-brand-gold transition-opacity duration-300",
+                    isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                  )}>
+                    {link.id}
+                  </span>
+                  <span className={cn(
+                    "text-sm font-mono tracking-[0.2em] uppercase transition-colors duration-300",
+                    isActive ? "text-white" : "text-white/50 group-hover:text-white"
+                  )}>
+                    {link.name}
+                  </span>
+                </div>
+                <motion.div 
+                  initial={false}
+                  animate={{ width: isActive ? "100%" : "0%" }}
+                  className="absolute -bottom-1 h-[1px] bg-brand-gold group-hover:w-full transition-all duration-500"
+                />
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Desktop Actions */}
@@ -125,19 +138,28 @@ export function Header() {
             className="fixed inset-0 bg-[#050505] z-40 flex flex-col p-8 pt-32"
           >
             <div className="flex flex-col gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-baseline gap-4 group"
-                >
-                  <span className="text-xs font-mono text-brand-gold">{link.id}</span>
-                  <span className="text-4xl font-bold text-white uppercase tracking-tighter group-hover:text-brand-gold transition-colors">
-                    {link.name}
-                  </span>
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-baseline gap-4 group"
+                  >
+                    <span className={cn(
+                      "text-xs font-mono text-brand-gold transition-colors",
+                      isActive ? "opacity-100" : "opacity-40"
+                    )}>{link.id}</span>
+                    <span className={cn(
+                      "text-4xl font-bold uppercase tracking-tighter transition-colors",
+                      isActive ? "text-brand-gold" : "text-white group-hover:text-brand-gold"
+                    )}>
+                      {link.name}
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
             
             <div className="mt-auto pb-12 flex flex-col gap-8">

@@ -12,7 +12,7 @@ export function WhoWeServe() {
   return (
     <section className="relative w-full min-h-[90vh] bg-brand-charcoal pt-40 pb-32 z-10 -mt-24 overflow-hidden">
       {/* Background structural elements */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:6rem_6rem] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:6rem_6rem] pointer-events-none" />
       
       {/* Large Decorative "M" in background */}
       <div className="absolute -left-20 top-1/2 -translate-y-1/2 text-[40rem] font-bold text-white/[0.02] select-none pointer-events-none leading-none tracking-tighter">
