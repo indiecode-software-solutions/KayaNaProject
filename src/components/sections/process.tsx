@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Globe, FileText, Ship, CheckCircle2 } from "lucide-react";
+import { Search, Globe, Shield, FileText, Ship, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
 const processSteps = [
@@ -22,20 +22,27 @@ const processSteps = [
   },
   { 
     id: 3, 
+    title: "Supplier Verification", 
+    description: "Rigorous vetting of international partners to ensure compliance, quality, and ethical standards.", 
+    icon: Shield,
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2070&auto=format&fit=crop"
+  },
+  { 
+    id: 4, 
     title: "Procurement & Negotiation", 
     description: "Securing contracts and establishing long-term enterprise pricing structures.", 
     icon: FileText,
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop"
   },
   { 
-    id: 4, 
+    id: 5, 
     title: "Logistics & Distribution", 
     description: "Coordinating multi-modal freight, warehousing, and customs clearance.", 
     icon: Ship,
     image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop"
   },
   { 
-    id: 5, 
+    id: 6, 
     title: "Delivery & Ongoing Support", 
     description: "Final mile execution and continuous supply chain optimization.", 
     icon: CheckCircle2,

@@ -60,17 +60,62 @@ export function Hero() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center origin-bottom z-0">
-      {/* Background Image/Video */}
-      <div ref={bgRef} className="absolute inset-0 w-full h-full">
-        <Image
-          src="https://images.unsplash.com/photo-1473445730015-841f29a9490b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Cinematic Global Logistics Port"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+    </section>
+  );
+}
+
+export function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useGSAP(() => {
+    if (!containerRef.current || !textRef.current) return;
+
+    const tl = gsap.timeline();
+
+    // Initial load animation
+    tl.fromTo(
+      textRef.current.children,
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.15,
+        ease: "cinematic",
+      }
+    );
+
+    // Scroll parallax & scale-down effect
+    gsap.to(containerRef.current, {
+      scale: 0.85,
+      opacity: 0,
+      borderRadius: "4rem",
+      ease: "none",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top top",
+        end: "50% top",
+        scrub: true,
+      },
+    });
+  }, { scope: containerRef });
+
+  return (
+    <section ref={containerRef} className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center origin-bottom z-0 bg-[#050505]">
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
+        >
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-cargo-ship-and-containers-at-the-port-10534-large.mp4" type="video/mp4" />
+        </video>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-brand-charcoal/40 mix-blend-multiply pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-brand-navy/30 pointer-events-none" />
@@ -78,22 +123,22 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 md:px-12 flex flex-col items-center text-center">
-        <div ref={textRef} className="max-w-5xl flex flex-col items-center">
+        <div ref={textRef} className="max-w-6xl flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-sans tracking-tighter text-white mb-6 leading-[1.1]">
             Your Global Partner in <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-white">
-              Sourcing & Logistics
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-white to-brand-gold bg-[length:200%_auto] animate-gradient-x">
+              Sourcing, Supply & Logistics
             </span>
           </h1>
-          <p className="text-lg md:text-2xl text-white/80 font-secondary max-w-2xl mb-10 leading-relaxed">
-            Providing reliable sourcing, procurement, supply chain, and distribution solutions across multiple industries worldwide.
+          <p className="text-lg md:text-2xl text-white/80 font-secondary max-w-3xl mb-10 leading-relaxed">
+            Providing reliable <span className="text-white font-semibold">sourcing</span>, <span className="text-white font-semibold">procurement</span>, <span className="text-white font-semibold">supply chain</span>, and <span className="text-white font-semibold">distribution</span> solutions across multiple industries worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.2)]">
-              Explore Services
+            <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.2)] bg-brand-gold text-brand-navy hover:bg-white transition-all duration-500">
+              Get in Touch
             </Button>
-            <Button variant="glass" size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full">
-              Global Coverage
+            <Button variant="glass" size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full border-white/10 hover:bg-white/5">
+              Explore Services
             </Button>
           </div>
         </div>
