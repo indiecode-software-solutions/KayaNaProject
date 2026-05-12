@@ -46,7 +46,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[200] flex justify-center bg-brand-charcoal/95 backdrop-blur-3xl px-6 overflow-y-auto"
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-brand-charcoal/95 backdrop-blur-3xl px-6 overflow-y-auto"
         >
           {/* Close Button */}
           <button 
@@ -56,7 +56,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <X className="w-10 h-10" />
           </button>
 
-          <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-start pt-24 md:pt-32">
+          <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Info */}
             <motion.div 
               initial={{ opacity: 0, x: -40 }}
