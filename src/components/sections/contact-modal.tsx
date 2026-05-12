@@ -59,13 +59,13 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               
               <div className="mt-12 space-y-6">
                 <div className="flex items-center gap-4 group cursor-pointer">
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-gold/50 transition-colors">
+                  <div className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center group-hover:border-brand-gold/50 transition-colors">
                     <CheckCircle2 className="w-5 h-5 text-brand-gold" />
                   </div>
                   <p className="text-white/80 font-secondary">Global Logistics Advisory</p>
                 </div>
                 <div className="flex items-center gap-4 group cursor-pointer">
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-gold/50 transition-colors">
+                  <div className="w-12 h-12 rounded-none border border-white/10 flex items-center justify-center group-hover:border-brand-gold/50 transition-colors">
                     <CheckCircle2 className="w-5 h-5 text-brand-gold" />
                   </div>
                   <p className="text-white/80 font-secondary">Supply Chain Optimization</p>
@@ -78,7 +78,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.1 }}
-              className="glass-panel-dark p-8 md:p-12 rounded-[2.5rem] border-white/10 relative overflow-hidden shadow-2xl"
+              className="glass-panel-dark p-8 md:p-12 rounded-none border-white/10 relative overflow-hidden shadow-2xl"
             >
               <AnimatePresence mode="wait">
                 {!submitted ? (
@@ -97,7 +97,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                           required
                           type="text" 
                           placeholder="Your Name"
-                          className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all"
+                          className="w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all"
                         />
                       </div>
                       <div className="space-y-2">
@@ -106,7 +106,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                           required
                           type="email" 
                           placeholder="email@company.com"
-                          className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all"
+                          className="w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all"
                         />
                       </div>
                     </div>
@@ -115,7 +115,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <input 
                         type="text" 
                         placeholder="Company Name"
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all"
+                        className="w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all"
                       />
                     </div>
                     <div className="space-y-2">
@@ -124,10 +124,10 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         required
                         rows={4}
                         placeholder="How can we help you?"
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all resize-none"
+                        className="w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all resize-none"
                       />
                     </div>
-                    <Button size="lg" className="mt-4 py-8 text-lg rounded-2xl group relative overflow-hidden">
+                    <Button size="lg" className="mt-4 py-8 text-lg rounded-none group relative overflow-hidden">
                       <span className="relative z-10 flex items-center">
                         Send Message
                         <Send className="ml-3 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -141,7 +141,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     animate={{ opacity: 1, scale: 1 }}
                     className="flex flex-col items-center justify-center text-center py-12"
                   >
-                    <div className="w-24 h-24 rounded-full bg-brand-gold/10 flex items-center justify-center mb-8">
+                    <div className="w-24 h-24 rounded-none bg-brand-gold/10 flex items-center justify-center mb-8">
                       <CheckCircle2 className="w-12 h-12 text-brand-gold" />
                     </div>
                     <h3 className="text-4xl font-bold text-white mb-4 tracking-tight">Transmission Successful</h3>

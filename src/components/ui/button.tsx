@@ -15,15 +15,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
-          "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center whitespace-nowrap rounded-none text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
           {
             "bg-brand-gold text-brand-navy hover:bg-brand-gold/90": variant === "default",
             "border border-white/20 bg-transparent hover:bg-white/10 text-white": variant === "outline",
             "hover:bg-white/10 hover:text-white text-white": variant === "ghost",
             "glass-panel hover:bg-white/10 text-white": variant === "glass",
             "h-10 px-4 py-2": size === "default",
-            "h-9 rounded-md px-3": size === "sm",
-            "h-12 rounded-md px-8 text-base": size === "lg",
+            "h-9 rounded-none px-3": size === "sm",
+            "h-12 rounded-none px-8 text-base": size === "lg",
             "h-10 w-10": size === "icon",
           },
           className

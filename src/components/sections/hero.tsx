@@ -52,7 +52,7 @@ export function Hero() {
     gsap.to(containerRef.current, {
       scale: 0.85,
       opacity: 0,
-      borderRadius: "4rem",
+      borderRadius: "0rem",
       ease: "none",
       scrollTrigger: {
         trigger: containerRef.current,
@@ -114,7 +114,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Button 
               size="lg" 
-              className="w-full sm:w-auto text-lg px-8 py-6 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.2)]"
+              className="w-full sm:w-auto text-lg px-8 py-6 rounded-none shadow-[0_0_20px_rgba(212,175,55,0.2)]"
               onClick={() => setIsContactOpen(true)}
             >
               Get in Touch
@@ -122,7 +122,7 @@ export function Hero() {
             <Button 
               variant="glass" 
               size="lg" 
-              className="w-full sm:w-auto text-lg px-8 py-6 rounded-full"
+              className="w-full sm:w-auto text-lg px-8 py-6 rounded-none"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Services
