@@ -94,7 +94,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.1 }}
-              className="glass-panel-dark p-8 md:p-12 rounded-none border-white/10 relative overflow-hidden shadow-2xl"
+              className="glass-panel-dark px-8 py-8 md:px-12 md:py-10 rounded-none border-white/10 relative overflow-hidden shadow-2xl"
             >
               <AnimatePresence mode="wait">
                 {!submitted ? (
@@ -104,9 +104,9 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     onSubmit={handleSubmit}
-                    className="flex flex-col gap-6"
+                    className="flex flex-col gap-5"
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                       <div className="space-y-2">
                         <label className="text-[10px] font-mono uppercase tracking-widest text-white/40 ml-2">Full Name</label>
                         <input 
@@ -143,7 +143,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         className="w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-brand-gold/50 focus:bg-white/[0.08] transition-all resize-none"
                       />
                     </div>
-                    <Button size="lg" className="mt-4 py-8 text-lg rounded-none group relative overflow-hidden">
+                    <Button size="lg" className="mt-4 py-6 text-lg rounded-none group relative overflow-hidden">
                       <span className="relative z-10 flex items-center">
                         Send Message
                         <Send className="ml-3 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
