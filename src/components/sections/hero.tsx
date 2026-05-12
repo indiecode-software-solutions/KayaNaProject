@@ -111,10 +111,10 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.2)]">
-              Explore Services
+              Get in Touch
             </Button>
             <Button variant="glass" size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full">
-              Global Coverage
+              Explore Services
             </Button>
           </div>
         </div>
