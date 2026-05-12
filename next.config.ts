@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'impact-logistics.in',
       },
+      {
+        protocol: 'https',
+        hostname: 'flexiblelogisticsllc.com',
+      },
     ],
   },
 };

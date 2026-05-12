@@ -23,13 +23,13 @@ const servicesList = [
     id: "logistics",
     title: "3PL Logistics",
     description: "Comprehensive third-party logistics covering warehousing, distribution, and fulfillment services across all major trade routes.",
-    image: "/bento-bg.png",
+    image: "https://images.unsplash.com/photo-1619302820124-e3b9d8a7f686?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "brokerage",
     title: "In-House Brokerage",
     description: "Navigating complex international customs and regulations to ensure frictionless cross-border transit of goods.",
-    image: "/hero-bg.png",
+    image: "https://flexiblelogisticsllc.com/wp-content/uploads/2024/02/Freight-Brokerage-Services-1.jpg",
   },
 ];
 
