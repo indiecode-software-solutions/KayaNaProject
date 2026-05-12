@@ -129,7 +129,7 @@ export function Industries() {
               <motion.div
                 key={item.id}
                 variants={itemVariants}
-                className={`relative group rounded-2xl overflow-hidden border-white/10 ${item.colSpan} ${item.rowSpan}`}
+                className={`relative group rounded-none overflow-hidden border-white/10 ${item.colSpan} ${item.rowSpan}`}
               >
                 {/* Background Image (scaled on hover) */}
                 <motion.div className="absolute inset-0 w-full h-full -z-10 transition-transform duration-700 ease-[0.76,0,0.24,1] group-hover:scale-105">
@@ -145,13 +145,13 @@ export function Industries() {
                 </motion.div>
 
                 {/* Animated Glowing Border on Hover */}
-                <div className="absolute inset-0 border border-brand-blue/0 group-hover:border-brand-blue/40 rounded-2xl transition-colors duration-500 box-border pointer-events-none" />
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 shadow-[inset_0_0_20px_rgba(148,163,184,0.15)] rounded-2xl transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 border border-brand-blue/0 group-hover:border-brand-blue/40 rounded-none transition-colors duration-500 box-border pointer-events-none" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 shadow-[inset_0_0_20px_rgba(148,163,184,0.15)] rounded-none transition-opacity duration-500 pointer-events-none" />
 
                 {/* Content */}
                 <div className="relative h-full flex flex-col justify-end p-8">
                   <div className="mb-auto">
-                    <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10 text-white mb-4">
+                    <div className="w-12 h-12 rounded-none bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/10 text-white mb-4">
                       <Icon className="w-6 h-6" />
                     </div>
                   </div>

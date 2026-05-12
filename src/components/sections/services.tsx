@@ -129,7 +129,7 @@ export function Services() {
               className="service-detail-section min-h-[70vh] flex items-center py-12 lg:py-24"
             >
               <div className="w-full relative group">
-                <div className="aspect-[4/3] w-full relative rounded-2xl overflow-hidden glass-panel-dark border-white/10 mb-8">
+                <div className="aspect-[4/3] w-full relative rounded-none overflow-hidden glass-panel-dark border-white/10 mb-8">
                   <Image
                     src={service.image}
                     alt={service.title}
