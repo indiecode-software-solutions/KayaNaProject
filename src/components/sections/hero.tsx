@@ -45,29 +45,26 @@ export function Hero() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center origin-bottom z-0 bg-[#050505]">
+    <section ref={containerRef} className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center origin-bottom z-0 bg-brand-charcoal">
       {/* Background Media Container */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        {/* Cinematic Fallback Image (shows immediately while video loads) */}
-        <Image
-          src="https://images.unsplash.com/photo-1494412574743-019475224a4d?q=80&w=2070&auto=format&fit=crop"
-          alt="Cinematic Logistics Background"
-          fill
-          priority
-          className="object-cover opacity-40"
+      <div className="absolute inset-0 w-full h-full">
+        {/* Cinematic Fallback Image (CSS Background for instant load) */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center opacity-40"
+          style={{ 
+            backgroundImage: 'url("https://images.unsplash.com/photo-1494412574743-019475224a4d?q=80&w=2070&auto=format&fit=crop")',
+            backgroundPosition: 'center 30%'
+          }}
         />
         
-        {/* Hero Video */}
+        {/* Hero Video overlay */}
         <video
           ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-50 z-10"
-          onCanPlayThrough={(e) => {
-            (e.target as HTMLVideoElement).style.opacity = "0.6";
-          }}
+          className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen pointer-events-none z-10"
         >
           <source src="https://cdn.pixabay.com/video/2021/04/12/70874-537446559_large.mp4" type="video/mp4" />
         </video>
