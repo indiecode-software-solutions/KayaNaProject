@@ -77,7 +77,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 md:px-12 flex flex-col items-center text-center mt-20">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 flex flex-col items-center text-center">
         <div ref={textRef} className="max-w-5xl flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-sans tracking-tighter text-white mb-6 leading-[1.1]">
             Your Global Partner in <br className="hidden md:block" />
