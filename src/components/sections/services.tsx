@@ -11,13 +11,13 @@ const servicesList = [
     id: "sourcing",
     title: "Global Sourcing",
     description: "Identifying and securing high-quality suppliers worldwide, ensuring cost efficiency without compromising on standards.",
-    image: "/bento-bg.png",
+    image: "https://images.pexels.com/photos/335394/pexels-photo-335394.jpeg",
   },
   {
     id: "procurement",
     title: "Procurement & Supplying",
     description: "End-to-end purchasing operations, managing contracts, negotiations, and inventory acquisition for enterprise scale.",
-    image: "/hero-bg.png",
+    image: "https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg",
   },
   {
     id: "logistics",
