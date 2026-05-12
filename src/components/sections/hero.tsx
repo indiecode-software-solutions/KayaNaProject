@@ -109,7 +109,7 @@ export function Hero() {
             </span>
           </h1>
           <p className="text-lg md:text-2xl text-white/80 font-secondary max-w-2xl mb-10 leading-relaxed">
-            Providing reliable sourcing, procurement, supply chain, and distribution solutions across multiple industries worldwide.
+            Providing reliable <span className="text-white font-semibold">sourcing, procurement, supply chain, and distribution</span> solutions across multiple industries worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Button 
