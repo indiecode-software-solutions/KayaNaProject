@@ -36,12 +36,12 @@ export default function RootLayout({
       className={`${inter.variable} ${plusJakartaSans.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-brand-charcoal text-white flex flex-col pt-24">
+      <body className="min-h-screen bg-brand-charcoal text-white flex flex-col">
         <LenisProvider>
           <Header />
-          <div className="flex-1 relative z-20 bg-brand-charcoal">
+          <main className="flex-1 pt-24">
             {children}
-          </div>
+          </main>
           <Footer />
         </LenisProvider>
       </body>
