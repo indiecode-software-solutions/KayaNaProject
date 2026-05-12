@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLenis } from "lenis/react";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -12,17 +13,21 @@ interface ContactModalProps {
 
 export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [submitted, setSubmitted] = useState(false);
+  const lenis = useLenis();
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      lenis?.stop();
     } else {
       document.body.style.overflow = "unset";
+      lenis?.start();
     }
     return () => {
       document.body.style.overflow = "unset";
+      lenis?.start();
     };
-  }, [isOpen]);
+  }, [isOpen, lenis]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
