@@ -26,7 +26,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="relative bg-brand-navy text-white pt-24 pb-12 overflow-hidden w-full z-10 border-t border-white/5">
+    <footer id="contact" className="relative bg-brand-navy text-white pt-24 pb-12 overflow-hidden w-full z-10 border-t border-white/5">
       {/* Background Glow */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
 

@@ -73,7 +73,7 @@ export function Services() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="relative w-full bg-brand-charcoal z-10 border-t border-white/5">
+    <section id="services" ref={containerRef} className="relative w-full bg-brand-charcoal z-10 border-t border-white/5">
       <div className="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row relative">
         
         {/* Left Column (Sticky) */}

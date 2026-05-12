@@ -110,10 +110,19 @@ export function Hero() {
             Providing reliable sourcing, procurement, supply chain, and distribution solutions across multiple industries worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.2)]">
+            <Button 
+              size="lg" 
+              className="w-full sm:w-auto text-lg px-8 py-6 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.2)]"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get in Touch
             </Button>
-            <Button variant="glass" size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full">
+            <Button 
+              variant="glass" 
+              size="lg" 
+              className="w-full sm:w-auto text-lg px-8 py-6 rounded-full"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Explore Services
             </Button>
           </div>
