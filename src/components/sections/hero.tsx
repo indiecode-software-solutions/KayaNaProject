@@ -5,12 +5,14 @@ import Image from "next/image";
 import { useGSAP, gsap, ScrollTrigger } from "@/lib/gsap";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ContactModal } from "./contact-modal";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useGSAP(() => {
     if (!containerRef.current || !textRef.current || !bgRef.current) return;
@@ -113,7 +115,7 @@ export function Hero() {
             <Button 
               size="lg" 
               className="w-full sm:w-auto text-lg px-8 py-6 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.2)]"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => setIsContactOpen(true)}
             >
               Get in Touch
             </Button>
@@ -131,6 +133,9 @@ export function Hero() {
 
       {/* Bottom Scroll Indicator Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[150px] bg-brand-blue/20 blur-[80px] pointer-events-none" />
+
+      {/* Contact Modal Overlay */}
+      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </section>
   );
 }
