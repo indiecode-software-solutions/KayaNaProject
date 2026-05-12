@@ -5,64 +5,6 @@ import Image from "next/image";
 import { useGSAP, gsap, ScrollTrigger } from "@/lib/gsap";
 import { Button } from "@/components/ui/button";
 
-export function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-  const bgRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    if (!containerRef.current || !textRef.current || !bgRef.current) return;
-
-    const tl = gsap.timeline();
-
-    // Initial load animation
-    tl.fromTo(
-      bgRef.current,
-      { scale: 1.1, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 2, ease: "cinematic" }
-    ).fromTo(
-      textRef.current.children,
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: "cinematic",
-      },
-      "-=1.2"
-    );
-
-    // Scroll parallax & scale-down effect
-    gsap.to(bgRef.current, {
-      yPercent: 30,
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "50% top",
-        scrub: true,
-      },
-    });
-
-    gsap.to(containerRef.current, {
-      scale: 0.85,
-      opacity: 0,
-      borderRadius: "4rem",
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "50% top",
-        scrub: true,
-      },
-    });
-  }, { scope: containerRef });
-
-  return (
-    </section>
-  );
-}
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
