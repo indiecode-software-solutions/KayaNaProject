@@ -46,17 +46,30 @@ export function Hero() {
 
   return (
     <section ref={containerRef} className="relative w-full h-[100svh] overflow-hidden flex items-center justify-center origin-bottom z-0 bg-[#050505]">
-      {/* Background Video */}
+      {/* Background Media Container */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
+        {/* Cinematic Fallback Image (shows immediately while video loads) */}
+        <Image
+          src="https://images.unsplash.com/photo-1494412574743-019475224a4d?q=80&w=2070&auto=format&fit=crop"
+          alt="Cinematic Logistics Background"
+          fill
+          priority
+          className="object-cover opacity-40"
+        />
+        
+        {/* Hero Video */}
         <video
           ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
+          className="absolute inset-0 w-full h-full object-cover opacity-50 z-10"
+          onCanPlayThrough={(e) => {
+            (e.target as HTMLVideoElement).style.opacity = "0.6";
+          }}
         >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-cargo-ship-and-containers-at-the-port-10534-large.mp4" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/video/2021/04/12/70874-537446559_large.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-brand-charcoal/40 mix-blend-multiply pointer-events-none" />
