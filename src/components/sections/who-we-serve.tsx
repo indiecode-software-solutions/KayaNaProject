@@ -40,10 +40,10 @@ export function WhoWeServe() {
               </p>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-sans tracking-tight text-white leading-[1.05] mb-8">
                 A trusted partner <br />
-                <span className="text-white/40">for your projects.</span>
+                <span className="text-white/40">for your global projects.</span>
               </h2>
-              <p className="text-white/70 text-xl font-secondary max-w-xl leading-relaxed">
-                Manacles Solutions partners with businesses, governments, and non-governmental organizations to provide reliable sourcing, procurement, supply, and logistics solutions tailored to operational needs.
+              <p className="text-white/50 text-xl font-secondary max-w-md leading-relaxed">
+                Navigating complex international markets with precision-engineered procurement and logistics.
               </p>
             </motion.div>
           </div>

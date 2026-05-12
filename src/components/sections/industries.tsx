@@ -59,24 +59,6 @@ const industries = [
     colSpan: "md:col-span-4",
     rowSpan: "md:row-span-1",
   },
-  {
-    id: "mining",
-    title: "Mining & Resources",
-    description: "End-to-end supply chain support for heavy machinery, specialized tools, and mineral logistics.",
-    icon: Factory, // Reusing factory for now, can be more specific
-    image: "https://images.unsplash.com/photo-1578319439584-104c94d37305?q=80&w=2070&auto=format&fit=crop",
-    colSpan: "md:col-span-4",
-    rowSpan: "md:row-span-1",
-  },
-  {
-    id: "textiles",
-    title: "Textiles & Apparel",
-    description: "Sourcing premium fabrics and managing global distribution for the fashion and industrial textile sectors.",
-    icon: Package,
-    image: "https://images.unsplash.com/photo-1558600095-f33f9ec1c700?q=80&w=2070&auto=format&fit=crop",
-    colSpan: "md:col-span-4",
-    rowSpan: "md:row-span-1",
-  },
 ];
 
 const containerVariants: Variants = {

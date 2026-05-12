@@ -31,18 +31,6 @@ const servicesList = [
     description: "Navigating complex international customs and regulations to ensure frictionless cross-border transit of goods.",
     image: "https://flexiblelogisticsllc.com/wp-content/uploads/2024/02/Freight-Brokerage-Services-1.jpg",
   },
-  {
-    id: "design",
-    title: "Product Design Support",
-    description: "Collaborating with manufacturers to refine product specifications and ensure designs are optimized for global production.",
-    image: "https://images.unsplash.com/photo-1581291417006-03e451493944?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    id: "delivery",
-    title: "Distribution & Delivery",
-    description: "Reliable final-mile delivery and localized distribution networks ensuring your products reach the right destination on time.",
-    image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?q=80&w=2070&auto=format&fit=crop",
-  },
 ];
 
 export function Services() {
