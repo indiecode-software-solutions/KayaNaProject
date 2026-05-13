@@ -46,7 +46,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-700 border-b",
         isScrolled 
-          ? "py-3 bg-[#050505]/80 backdrop-blur-xl border-white/10" 
+          ? "py-3 bg-[#050505]/80 backdrop-blur-md border-white/10" 
           : "py-6 bg-transparent border-transparent"
       )}
     >

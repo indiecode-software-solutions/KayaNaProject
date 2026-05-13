@@ -267,7 +267,7 @@ export function Network() {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="glass-panel-dark p-8 rounded-3xl border-white/10 backdrop-blur-xl pointer-events-auto shadow-2xl"
+          className="glass-panel-dark p-8 rounded-3xl border-white/10 backdrop-blur-md pointer-events-auto shadow-2xl"
         >
           <div className="grid grid-cols-2 gap-x-12 gap-y-8">
             <div>

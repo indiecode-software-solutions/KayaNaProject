@@ -1,9 +1,7 @@
 import { Hero } from "@/components/sections/hero";
 import { WhoWeServe } from "@/components/sections/who-we-serve";
-import { Industries } from "@/components/sections/industries";
 import { Services } from "@/components/sections/services";
-import { Process } from "@/components/sections/process";
-import { Network } from "@/components/sections/network";
+import { Industries, Process, Network } from "@/components/layout/client-sections";
 
 export default function Home() {
   return (

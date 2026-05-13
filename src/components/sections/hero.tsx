@@ -37,22 +37,9 @@ export function Hero() {
       "-=1.2"
     );
 
-    // Scroll parallax & scale-down effect
+    // Scroll parallax effect
     gsap.to(bgRef.current, {
       yPercent: 30,
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "50% top",
-        scrub: true,
-      },
-    });
-
-    gsap.to(containerRef.current, {
-      scale: 0.85,
-      opacity: 0,
-      borderRadius: "0rem",
       ease: "none",
       scrollTrigger: {
         trigger: containerRef.current,

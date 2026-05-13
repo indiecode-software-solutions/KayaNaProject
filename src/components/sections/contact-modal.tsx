@@ -46,7 +46,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[999] flex items-center justify-center bg-brand-charcoal/95 backdrop-blur-3xl px-6 overflow-y-auto"
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-brand-charcoal/90 backdrop-blur-xl px-6 overflow-y-auto"
         >
           {/* Close Button */}
           <button 

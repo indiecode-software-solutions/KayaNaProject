@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { useGSAP, gsap, ScrollTrigger } from "@/lib/gsap";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -128,7 +129,13 @@ export function Services() {
               id={`service-detail-${index}`}
               className="service-detail-section min-h-[70vh] flex items-center py-12 lg:py-24"
             >
-              <div className="w-full relative group">
+              <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                className="w-full relative group"
+              >
                 <div className="aspect-[4/3] w-full relative rounded-none overflow-hidden glass-panel-dark border-white/10 mb-8">
                   <Image
                     src={service.image}
@@ -145,7 +152,7 @@ export function Services() {
                 <button className="mt-8 flex items-center gap-2 text-brand-gold font-semibold hover:text-white transition-colors border-b border-brand-gold/30 hover:border-white pb-1">
                   Learn more about {service.title} <ArrowRight className="w-4 h-4" />
                 </button>
-              </div>
+              </motion.div>
             </div>
           ))}
 

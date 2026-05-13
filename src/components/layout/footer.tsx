@@ -28,7 +28,7 @@ export function Footer() {
   return (
     <footer id="contact" className="relative bg-brand-navy text-white pt-24 pb-12 overflow-hidden w-full z-10 border-t border-white/5">
       {/* Background Glow */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-blue/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
